@@ -106,7 +106,7 @@ Through this project, we explored:
 
 
 📚 References
-MDN – HTTP Overview
-Flask Docs
-Spring Boot Docs
+MDN – HTTP Overview,
+Flask Docs,
+Spring Boot Docs,
 Node.js Docs
