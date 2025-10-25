@@ -1,0 +1,81 @@
+<html>
+<head>
+    <title>Simple HTTP Web Server</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Simple HTTP Web Server</h1>
+
+    <p>Welcome to the Simple HTTP Web Server!</p>
+
+    <p>This server is designed to provide a lightweight, easy-to-use platform for handling basic web operations.</p>
+
+    <h2>Features</h2>
+
+    <h3>HTTP Protocol Support</h3>
+    <ul>
+        <li>Fully supports handling of GET and POST HTTP methods.</li>
+    </ul>
+
+    <h3>User Authentication System</h3>
+    <ul>
+        <li><b>Login:</b> Allows registered users to securely log into the system. Validates user credentials against stored data.</li>
+        <li><b>Registration:</b> Enables new users to create accounts. Stores user information securely for future logins.</li>
+    </ul>
+
+    <h2>Functionality Overview</h2>
+
+    <h3>Handling GET Requests</h3>
+    <ul>
+        <li>Serves static HTML files (e.g., home page, login page, registration form).</li>
+        <li>Provides easy navigation for users accessing the server through a web browser.</li>
+    </ul>
+
+    <h3>Handling POST Requests</h3>
+    <ul>
+        <li><b>User Login:</b> Authenticates submitted username and password.</li>
+        <li><b>User Registration:</b> Saves new user details securely.</li>
+    </ul>
+
+    <h2>File Structure</h2>
+<pre>
+/server/
+|
+|-- index.html          
+|-- login.html          
+|-- register.html       
+|-- server.cpp          
+|-- users.txt           
+`-- static/             
+</pre>
+
+    <h2>Security Notes</h2>
+    <ul>
+        <li>Basic password storage (enhanced with SHA-256 hashing).</li>
+        <li>Basic input validation to prevent injection attacks (recommended to extend).</li>
+    </ul>
+
+    <h2>How to Use</h2>
+
+    <pre>
+Start the server:
+g++ server.cpp -o server -pthread -lssl -lcrypto
+./server
+
+Open a browser and navigate to:
+http://localhost:9090/
+
+Use the interface to either:
+- Register a new user
+- Login with existing credentials
+- Browse served pages
+    </pre>
+
+    <p><b>Note:</b> This server is intended for learning and prototyping purposes. For production-level deployment, additional security and scalability features are recommended.</p>
+
+    <form action="/finish" method="POST">
+        <input type="submit" value="Finish">
+    </form>
+</body>
+</html>
+
